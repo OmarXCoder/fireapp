@@ -41,7 +41,18 @@ return [
     |--------------------------------------------------------------------------
     */
     'firebase' => [
-        'credentials_file' => env('FIREBASE_CREDENTIALS_FILE'),
+        'credentials' => [
+            "type" => env('GAC_TYPE'),
+            "project_id" => env('GAC_PROJECT_ID'),
+            "private_key_id" => env('GAC_PRIVATE_KEY_ID'),
+            "private_key" => env('GAC_PRIVATE_KEY'),
+            "client_email" => env('GAC_CLIENT_EMAIL'),
+            "client_id" => env('GAC_CLIENT_ID'),
+            "auth_uri" => env('GAC_AUTH_URI'),
+            "token_uri" => env('GAC_TOKEN_URI'),
+            "auth_provider_x509_cert_url" => env('GAC_AUTH_PROVIDER_X509_CERT_URL'),
+            "client_x509_cert_url" => env('GAC_CLIENT_X509_CERT_URL'),
+        ],
     ],
 
 ];

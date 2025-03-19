@@ -56,9 +56,7 @@ class PostController extends Controller
 
     private function fireDatabase()
     {
-        $factory = (new Factory)->withServiceAccount(
-            base_path(config('services.firebase.credentials_file'))
-        );
+        $factory = (new Factory)->withServiceAccount(config('services.firebase.credentials'));
 
         $firestore = $factory->createFirestore();
 
